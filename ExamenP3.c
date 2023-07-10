@@ -64,11 +64,26 @@ int main() {
 
     float sumaProm = 0.0;
 
-    for (int i= 0, i < numEstu; i++) {
+    for (int i= 0; i < numEstu; i++) {
         float promedio = calculoProm(estudiantes[i]. N1, estudiantes[i]. N2, estudiantes[i]. N3);
         sumaProm += promedio;
-
+        fprintf (archiS, "%d, %s, %s, %.2f; %.2f; %2f\n",
+            estudiantes[i]. numA, estudiantes[i]. nombre, estudiantes[i].carrera, 
+            estudiantes[i].N1, estudiantes[i].N2, estudiantes[i].N3, promedio,);
     }
+
+    float promTotal = sumaProm / numEstu;
+    fprintf (archiS "Promedio total: %.2f\n", promTotal);
+
+    fclose(archiS)
+
+    
+    free(estudiantes);
+
+    printf("El proceso termino.\n);
+
+    return 0;
+
 
 } 
 
@@ -78,6 +93,26 @@ int main() {
 
 
 
+   
+   
+     
 
+    
+   
+    
+       
+    
+    
+    
+
+    
+
+
+  
+    
+
+
+
+    
     
     
