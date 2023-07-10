@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_LARGO 50
+#define MAX_LARGO 100
 
 typedef struct {
     int numA;
@@ -13,16 +13,15 @@ typedef struct {
     float N3;
 } Estu;
 
-float calculoProm(float N1, float N2, float N3) {
-    return (N1 + N2+ N3)/3;
-}
-
 int compararEstu( const void* estu1, const void* estu2) {
     Estu* e1 = (Estu*)estu1;
     Estu* e2 = (Estu*)estu2;
     return e2->numA - e1->numA;
 }
 
+float calculoProm(float N1, float N2, float N3) {
+    return (N1 + N2+ N3)/3;
+}
 
 int main() {
 
@@ -62,12 +61,12 @@ int main() {
 
     fprintf(archiS, "%d\n", numEstu);
 
-    float sumaProm = 0.0;
+    float sumaProm = 0.00;
 
     for (int i= 0; i < numEstu; i++) {
         float promedio = calculoProm(estudiantes[i]. N1, estudiantes[i]. N2, estudiantes[i]. N3);
         sumaProm += promedio;
-        fprintf (archiS, "%d, %s, %s, %.2f; %.2f; %2f\n",
+        fprintf (archiS,"%d, %s, %s, %.2f; %.2f; %2f\n",
             estudiantes[i]. numA, estudiantes[i]. nombre, estudiantes[i].carrera, 
             estudiantes[i].N1, estudiantes[i].N2, estudiantes[i].N3, promedio);
     }
@@ -83,7 +82,6 @@ int main() {
     printf("El proceso termino.\n");
 
     return 0;
-
 
 } 
 
